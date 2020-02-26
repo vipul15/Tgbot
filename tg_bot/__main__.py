@@ -139,7 +139,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup(
-                [InlineKeyboardButton(text="Coisnto community", url="http://t.me/coinstocommunity")])
+                [[InlineKeyboardButton(text="Coisnto community", url="http://t.me/coinstocommunity")]])
             update.effective_message.reply_text(
                 tld(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
                 disable_web_page_preview=True,
